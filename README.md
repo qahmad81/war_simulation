@@ -14,6 +14,7 @@ and more
 to make petter performace we need a method in numby to store update from array on source array as detail in link below
 
 https://stackoverflow.com/questions/64513436/in-python-with-numpy-how-can-i-update-array-from-another-array-depend-on-column
+
 or we need take mask of source array as pointer so no need to store data
 
 so if you have the selution please contact me her
@@ -23,4 +24,5 @@ this project give as hope to make more simulations, like city economy or animal 
 
 ## Upload
 this project uploaded at github on this link
+
 https://github.com/qahmad81/war_simulation
