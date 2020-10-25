@@ -3,7 +3,8 @@ numpy test
 Created on Mon Oct 12 19:08:33 2020
 @author: ahmad odeh
 Test project learn numpy with big data to find how numpy manage to process with short time
-Population simulation
+War Simulation
+https://github.com/qahmad81/war_simulation
 """
 import numpy as np
 import time as t
