@@ -14,11 +14,11 @@ cols_num = 11
 # health of soldier
 hps = (80,85,90,95,100,105,110,115,120)
 # number of soldier in army 1 you can try (10, 10000, 50000 ..)
-army1size = 1000
+army1size = 100000
 # number of soldier in army 2
-army2size = 1000
+army2size = 100000
 # round of 2 attack from each army and rest turn
-rounds = 4
+rounds = 5
 #name of soldier cols
 dt = np.dtype([('number','i2'), ('hp','i2'), ('attack','i2'), ('hit_damage','i2'), ('explode_damage','i2'), ('fire_damage','i2'), ('hit_def','i2'), ('explode_def','i2'), ('fire_def','i2'), ('energy_cost','i2'), ('energy','i2')])
 
@@ -46,14 +46,18 @@ def print_sample(data, rows_num):
     rows_keys = np.unique(np.random.randint(low=0, high=data_rows, size=rows_num))
     print(data[rows_keys])
 
-# am sorry i cant find how merge tow array depend on column in numpy
-# i will replace this when i find it
-# so i post a question on stackoverflow to ask for help in this link
+# am stop there but fountainhead help me to fix this issue in performance in this link
 # https://stackoverflow.com/questions/64513436/in-python-with-numpy-how-can-i-update-array-from-another-array-depend-on-column
+# so i can now rise the army size from 50K on 22second to 1M at 5 seconds
 def update_ary_with_ary(source, updates):
+    """
+    # old code    
     for x in updates:
         index_of_col = np.argwhere(source[:,0] == x[0])
         source[index_of_col] = x
+    """
+    # the new one
+    source[updates[:,0]] = updates
 
 def soldiers_rest(soldiers):
     soldiers_num = len(soldiers)
